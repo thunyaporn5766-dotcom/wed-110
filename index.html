@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Thunyaporn Lodcham</title>
+
+  <style>
+    :root {
+  --bg: #f4f9f9;  /* พื้นหลังสีอ่อน สบายตา */
+  --card: #66d9e8; /* การ์ดมีสีฟ้าอ่อนเพื่อให้ดูสดใส */
+  --white: #ffffff; /* สีขาวสำหรับพื้นหลัง */
+  --green: #60b7a3; /* สีเขียวมะนาวอ่อนสำหรับปุ่มและหัวข้อ */
+  --text: #333333;  /* สีข้อความที่อ่านง่าย */
+  --radius: 20px; /* รัศมีมุมโค้ง */
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  color: #3a92b8;  /* ฟ้าอ่อนสำหรับชื่อโปรไฟล์ */
+  margin-bottom: 6px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.75;
+  color: #6a6a6a;  /* สีเทาอ่อนสำหรับคำอธิบาย */
+}
+
+/* Profile Card */
+.profile-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.profile-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.profile-left p {
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.profile-left {
+  color: #ffffff;
+}
+
+.profile-right {
+  width: 300px;
+  text-align: center;
+}
+
+.profile-right img {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn-social {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 20px;
+  background: #60b7a3;  /* ปุ่มสีเขียวมะนาว */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.btn-social:hover {
+  background: #4fa28b;  /* เปลี่ยนเป็นสีเขียวเข้มเมื่อโฮเวอร์ */
+  transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+  background: var(--white);
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: var(--radius);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #3a92b8;  /* หัวข้อเป็นฟ้าอ่อนเพื่อให้เด่น */
+}
+
+.hobby-img {
+  width: 260px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+    <header>
+      <h1>Thunyaporn Lodcham</h1>
+      <p>Personal Portfolio • About Me • Contact</p>
+    </header>
+
+    <!-- PROFILE -->
+    <section class="profile-card">
+      <div class="profile-left">
+        <p><b>ชื่อ-นามสกุล:</b> ธัญพร รสฉ่ำ (Thunyaporn Lodcham)</p>
+        <p><b>รหัสนักศึกษา:</b> 66124630110</p>
+        <p><b>Gmail:</b> 66124630110@lawasri.tru.ac.th</p>
+        <p><b>เบอร์โทร:</b> 0927106586</p>
+
+        <!-- Social Buttons -->
+        <p style="margin-top:14px;">
+          <a class="btn-social" href="https://www.facebook.com/tangmo.thunyaporn.1" target="_blank">Facebook</a>
+          <a class="btn-social" href="https://www.instagram.com/t_angmo62/ ">Instagram</a>
+        </p>
+      </div>
+
+      <div class="profile-right">
+        <img src="tangmo.jpg" alt="รูปโปรไฟล์ของธัญพร">
+      </div>
+    </section>
+
+    <!-- HOBBY -->
+    <section class="section">
+      <h2>งานอดิเรก</h2>
+      <p>
+        เป็นกิจกรรมแข่งขันกีฬาวอลเลย์บอลจังหวะลพบุรีจัดการแข่งขันได้รับรางวัลรองชนะเลิศลำดับ2แข่งขันที่โรงเรียนพิบูลวิทยาลัย 💗🐱  
+      </p>
+
+      <img class="hobby-img" src="hobby.jpg" alt="รูปงานอดิเรก">
+    </section>
+
+    <!-- PET -->
+    <section class="section">
+      <h2>สัตว์เลี้ยงที่ชอบ</h2>
+      <p>หนูรักหมามาก ๆ ค่ะ เพราะหมาทำให้รู้สึกอบอุ่น น่ารัก และเป็นกำลังใจเสมอ 💕</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <img src="dog.jpeg" style="border-radius:10px;">
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
+
