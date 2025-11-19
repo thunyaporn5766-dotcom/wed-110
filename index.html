@@ -1,166 +1,192 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+  <!-- กำหนดการตั้งค่าเอกสารเป็น UTF-8 เพื่อรองรับตัวอักษรภาษาไทย -->
   <meta charset="utf-8" />
+  <!-- กำหนดการตอบสนองที่เหมาะสมกับอุปกรณ์มือถือ -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- กำหนดชื่อของหน้าเว็บ -->
   <title>Portfolio – Thunyaporn Lodcham</title>
 
   <style>
     :root {
-  --bg: #f4f9f9;  /* พื้นหลังสีอ่อน สบายตา */
-  --card: #66d9e8; /* การ์ดมีสีฟ้าอ่อนเพื่อให้ดูสดใส */
-  --white: #ffffff; /* สีขาวสำหรับพื้นหลัง */
-  --green: #60b7a3; /* สีเขียวมะนาวอ่อนสำหรับปุ่มและหัวข้อ */
-  --text: #333333;  /* สีข้อความที่อ่านง่าย */
-  --radius: 20px; /* รัศมีมุมโค้ง */
-  font-family: "Noto Sans Thai", sans-serif;
-}
+      /* กำหนดตัวแปรสีพื้นหลังสีอ่อน */
+      --bg: #f4f9f9;
+      /* กำหนดตัวแปรสีของการ์ด */
+      --card: #66d9e8;
+      /* สีขาว */
+      --white: #ffffff;
+      /* สีเขียวมะนาวอ่อน */
+      --green: #60b7a3;
+      /* สีของข้อความ */
+      --text: #333333;
+      /* รัศมีของมุม */
+      --radius: 20px;
+      /* กำหนดฟอนต์ */
+      font-family: "Noto Sans Thai", sans-serif;
+    }
 
-body {
-  margin: 0;
-  padding: 20px;
-  background: var(--bg);
-  color: var(--text);
-}
+    /* สไตล์พื้นฐานของ body */
+    body {
+      margin: 0;
+      padding: 20px;
+      background: var(--bg);  /* ใช้สีพื้นหลังที่กำหนดใน :root */
+      color: var(--text);  /* ใช้สีข้อความที่กำหนดใน :root */
+    }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    /* กำหนดขนาดพื้นที่หลัก */
+    .container {
+      max-width: 1100px;  /* จำกัดขนาดความกว้าง */
+      margin: 0 auto;  /* จัดกลาง */
+    }
 
-header {
-  text-align: center;
-  margin-bottom: 28px;
-}
+    /* ส่วนของ header */
+    header {
+      text-align: center;  /* จัดข้อความในส่วน header ให้อยู่กลาง */
+      margin-bottom: 28px;  /* เพิ่มพื้นที่ด้านล่าง */
+    }
 
-header h1 {
-  font-size: 2.4rem;
-  color: #3a92b8;  /* ฟ้าอ่อนสำหรับชื่อโปรไฟล์ */
-  margin-bottom: 6px;
-}
+    /* สไตล์หัวข้อหลักใน header */
+    header h1 {
+      font-size: 2.4rem;  /* ขนาดตัวอักษรของชื่อโปรไฟล์ */
+      color: #3a92b8;  /* สีฟ้าอ่อน */
+      margin-bottom: 6px;  /* เพิ่มพื้นที่ด้านล่าง */
+    }
 
-header p {
-  font-size: 1.2rem;
-  opacity: 0.75;
-  color: #6a6a6a;  /* สีเทาอ่อนสำหรับคำอธิบาย */
-}
+    /* สไตล์คำบรรยายใน header */
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.75;  /* ทำให้ข้อความโปร่งใส */
+      color: #6a6a6a;  /* สีเทาอ่อน */
+    }
 
-/* Profile Card */
-.profile-card {
-  background: var(--card);
-  padding: 30px;
-  border-radius: var(--radius);
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  align-items: center;
-}
+    /* สไตล์การ์ดโปรไฟล์ */
+    .profile-card {
+      background: var(--card);  /* ใช้สีที่กำหนดใน :root */
+      padding: 30px;  /* เพิ่มช่องว่างภายใน */
+      border-radius: var(--radius);  /* มุมโค้ง */
+      display: flex;  /* ใช้ Flexbox เพื่อจัดเรียง */
+      gap: 28px;  /* เพิ่มระยะห่างระหว่างสมาชิก */
+      flex-wrap: wrap;  /* เมื่อหน้าจอเล็กลง ให้สมาชิกย้ายไปอยู่บรรทัดใหม่ */
+      align-items: center;  /* จัดตำแหน่งสมาชิกให้ตรงกลางในแนวตั้ง */
+    }
 
-.profile-left {
-  flex: 1;
-  min-width: 280px;
-}
+    /* สไตล์ส่วนซ้ายในการ์ดโปรไฟล์ */
+    .profile-left {
+      flex: 1;  /* ใช้พื้นที่เหลือทั้งหมด */
+      min-width: 280px;  /* กำหนดขนาดขั้นต่ำ */
+    }
 
-.profile-left p {
-  font-size: 1.1rem;
-  margin: 6px 0;
-}
+    /* สไตล์ข้อความในส่วนซ้าย */
+    .profile-left p {
+      font-size: 1.1rem;  /* ขนาดตัวอักษร */
+      margin: 6px 0;  /* เพิ่มพื้นที่ระหว่างบรรทัด */
+    }
 
-.profile-left {
-  color: #ffffff;
-}
+    /* เปลี่ยนสีข้อความในโปรไฟล์ซ้ายเป็นขาว */
+    .profile-left {
+      color: #ffffff;
+    }
 
-.profile-right {
-  width: 300px;
-  text-align: center;
-}
+    /* สไตล์ส่วนขวาของโปรไฟล์ (รูปภาพ) */
+    .profile-right {
+      width: 300px;  /* กำหนดความกว้าง */
+      text-align: center;  /* จัดข้อความให้อยู่กลาง */
+    }
 
-.profile-right img {
-  width: 100%;
-  border-radius: 20px;
-  border: 3px solid white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    /* สไตล์รูปภาพในโปรไฟล์ */
+    .profile-right img {
+      width: 100%;  /* ให้รูปภาพเต็มขนาดของ container */
+      border-radius: 20px;  /* มุมโค้ง */
+      border: 3px solid white;  /* ขอบขาวรอบๆ รูป */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* เงารอบๆ รูป */
+    }
 
-/* Buttons */
-.btn-social {
-  display: inline-block;
-  margin: 6px;
-  padding: 10px 20px;
-  background: #60b7a3;  /* ปุ่มสีเขียวมะนาว */
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  transition: 0.2s;
-}
+    /* สไตล์ปุ่ม Social */
+    .btn-social {
+      display: inline-block;  /* ให้ปุ่มแสดงในบรรทัดเดียว */
+      margin: 6px;  /* เพิ่มระยะห่าง */
+      padding: 10px 20px;  /* เพิ่มพื้นที่ภายในปุ่ม */
+      background: #60b7a3;  /* สีเขียวมะนาว */
+      color: white;  /* ข้อความเป็นสีขาว */
+      text-decoration: none;  /* ไม่มีเส้นขีดใต้ */
+      border-radius: 30px;  /* มุมโค้งของปุ่ม */
+      font-size: 0.95rem;  /* ขนาดตัวอักษร */
+      transition: 0.2s;  /* เพิ่มการเปลี่ยนแปลงเมื่อโฮเวอร์ */
+    }
 
-.btn-social:hover {
-  background: #4fa28b;  /* เปลี่ยนเป็นสีเขียวเข้มเมื่อโฮเวอร์ */
-  transform: translateY(-2px);
-}
+    /* เมื่อเมาส์ hover ที่ปุ่ม Social */
+    .btn-social:hover {
+      background: #4fa28b;  /* สีเปลี่ยนเมื่อ hover */
+      transform: translateY(-2px);  /* ให้ปุ่มยกขึ้นเล็กน้อย */
+    }
 
-/* Sections */
-.section {
-  background: var(--white);
-  margin-top: 24px;
-  padding: 22px;
-  border-radius: var(--radius);
-}
+    /* สไตล์ส่วนต่างๆ ของหน้า */
+    .section {
+      background: var(--white);  /* พื้นหลังสีขาว */
+      margin-top: 24px;  /* เพิ่มระยะห่างจากส่วนบน */
+      padding: 22px;  /* เพิ่มพื้นที่ภายใน */
+      border-radius: var(--radius);  /* มุมโค้ง */
+    }
 
-.section h2 {
-  margin-top: 0;
-  color: #3a92b8;  /* หัวข้อเป็นฟ้าอ่อนเพื่อให้เด่น */
-}
+    /* สไตล์หัวข้อของแต่ละส่วน */
+    .section h2 {
+      margin-top: 0;  /* ลบระยะห่างด้านบน */
+      color: #3a92b8;  /* สีฟ้าอ่อน */
+    }
 
-.hobby-img {
-  width: 260px;
-  border-radius: 14px;
-  margin-top: 10px;
-}
-
+    /* สไตล์รูปภาพงานอดิเรก */
+    .hobby-img {
+      width: 260px;  /* ความกว้างของรูปภาพ */
+      border-radius: 14px;  /* มุมโค้ง */
+      margin-top: 10px;  /* เพิ่มพื้นที่ด้านบน */
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
     
+    <!-- ส่วนของ header -->
     <header>
-      <h1>Thunyaporn Lodcham</h1>
-      <p>Personal Portfolio • About Me • Contact</p>
+      <h1>Thunyaporn Lodcham</h1>  <!-- ชื่อโปรไฟล์ -->
+      <p>Personal Portfolio • About Me • Contact</p>  <!-- คำอธิบายโปรไฟล์ -->
     </header>
 
     <!-- PROFILE -->
     <section class="profile-card">
+      <!-- ข้อมูลโปรไฟล์ส่วนซ้าย -->
       <div class="profile-left">
         <p><b>ชื่อ-นามสกุล:</b> ธัญพร รสฉ่ำ (Thunyaporn Lodcham)</p>
         <p><b>รหัสนักศึกษา:</b> 66124630110</p>
         <p><b>Gmail:</b> 66124630110@lawasri.tru.ac.th</p>
         <p><b>เบอร์โทร:</b> 0927106586</p>
 
-        <!-- Social Buttons -->
+        <!-- ปุ่ม Social Media -->
         <p style="margin-top:14px;">
           <a class="btn-social" href="https://www.facebook.com/tangmo.thunyaporn.1" target="_blank">Facebook</a>
           <a class="btn-social" href="https://www.instagram.com/t_angmo62/ ">Instagram</a>
         </p>
       </div>
 
+      <!-- รูปโปรไฟล์ส่วนขวา -->
       <div class="profile-right">
         <img src="tangmo.jpg" alt="รูปโปรไฟล์ของธัญพร">
       </div>
     </section>
 
-    <!-- HOBBY -->
+    <!-- ส่วนงานอดิเรก -->
     <section class="section">
       <h2>งานอดิเรก</h2>
       <p>
-        เป็นกิจกรรมแข่งขันกีฬาวอลเลย์บอลจังหวะลพบุรีจัดการแข่งขันได้รับรางวัลรองชนะเลิศลำดับ2แข่งขันที่โรงเรียนพิบูลวิทยาลัยเป็นการแข่งขันที่สนุกละมันส์มากได้รู้จักเพื่อนร่วมทีมได้รู้จักทีมอื่นๆอีกมากมาย 💗🐱  
+        เป็นกิจกรรมแข่งขันกีฬาวอลเลย์บอลจังหวะลพบุรีจัดการแข่งขันได้รับรางวัลรองชนะเลิศลำดับ2แข่งขันที่โรงเรียนพิบูลวิทยาลัยเป็นการแข่งขันที่สนุกละมันส์มากได้รู้จักเพื่อนร่วมทีมได้รู้จักทีมอื่นๆอีกมากมาย 💗🐱
       </p>
 
+      <!-- รูปงานอดิเรก -->
       <img class="hobby-img" src="hobby.jpg" alt="รูปงานอดิเรก">
     </section>
 
-    <!-- PET -->
+    <!-- ส่วนสัตว์เลี้ยงที่ชอบ -->
     <section class="section">
       <h2>สัตว์เลี้ยงที่ชอบ</h2>
       <p>หนูรักหมามาก ๆ ค่ะ เพราะหมาทำให้ น่ารัก และเป็นกำลังใจเสมอ 💕</p>
@@ -172,4 +198,3 @@ header p {
   </div>
 </body>
 </html>
-
